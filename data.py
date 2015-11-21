@@ -20,7 +20,12 @@ if not isinstance(__builtins__, dict):
 
 DATA = {}
 
-
+def check_answer(quiz_type, inp, name):
+	if quiz_type == 'datatypes':
+		answer = name.split('.').pop()
+	else:
+		answer = name
+	return (inp == answer, answer)
 
 def main():
     import pprint
